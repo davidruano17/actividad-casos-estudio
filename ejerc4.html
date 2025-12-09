@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TCC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
@@ -44,11 +44,26 @@
     </div>
   </div>
 </nav>  
-    <main>
+    <main> 
+        <section class="col-12 col-md-9">
+            <h2>TCC</h2>
     
-    <main></main>
+            <label class="form-label">Peso (kg)</label>
+            <input type="number" id="peso" class="form-control">
+    
+            <label class="form-label mt-2">Zona</label>
+            <input type="number" id="zona" class="form-control" placeholder="1-5">
+    
+            <button type="button" class="btn btn-success mt-3" onclick="calcTCC()">
+                Calcular
+            </button>
+    
+            <p id="resultado"></p>
+        </section>
+    </main>
     <aside></aside>
     <footer></footer>
+    <script type="text/javascript" src="assets/js/ejer(4).js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
