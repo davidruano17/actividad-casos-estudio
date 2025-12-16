@@ -1,11 +1,14 @@
-function calcSalario() {
+function ejer7() {
     let horas = Number(document.getElementById("horas").value);
     let tarifa = Number(document.getElementById("tarifa").value);
+    let salario;
 
-    let total = horas <= 40
-        ? horas * tarifa
-        : (40 * tarifa) + ((horas - 40) * tarifa * 1.5);
+    if (horas <= 40) {
+        salario = horas * tarifa;
+    } else {
+        salario = (40 * tarifa) + ((horas - 40) * tarifa * 1.5);
+    }
 
-    document.getElementById("resultado").textContent =
-    "Salario del trabajador es: $ " + total;
+    document.getElementById("resultado").innerHTML =
+        "Salario del trabajador es: $ " + salario;
 }

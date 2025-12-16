@@ -1,8 +1,13 @@
-function calcAudifonos() {
-    let n = Number(document.getElementById("cantidad").value);
-    let precio = n >= 1000 ? 49850 : 71290;
-    let total = n * precio;
+function ejer6() {
+    let cantidad = Number(document.getElementById("cantidad").value);
+    let precio;
 
-    document.getElementById("resultado").textContent =
-    "Total a pagar es: $ " + total;
+    if (cantidad >= 1000) {
+        precio = 49850;
+    } else {
+        precio = 71290;
+    }
+
+    document.getElementById("resultado").innerHTML =
+        "Total a pagar es: $ " + (cantidad * precio);
 }

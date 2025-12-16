@@ -1,14 +1,23 @@
-function calcularDescuento() {
+function ejer2() {
     let precio = Number(document.getElementById("precio").value);
+    let descuento, porcentaje, total;
 
     if (precio <= 0) {
-        document.getElementById("resultado").textContent = "¡Ingrese un precio valido!";
+        document.getElementById("resultado").innerHTML = "¡Ingrese un precio valido!";
         return;
     }
 
-    let porcentaje = precio > 125000 ? 0.35 : 0.10;
-    let descuento = precio * porcentaje;
-    let total = precio - descuento;
+    if (precio > 125000) {
+        porcentaje = 0.35;
+    } else {
+        porcentaje = 0.10;
+    }
 
-    document.getElementById("resultado").innerHTML =  `Descuento: $ ${descuento}<br>Porcentaje: ${porcentaje * 100}%<br>Total a pagar: $ ${total}`;
+    descuento = precio * porcentaje;
+    total = precio - descuento;
+
+    document.getElementById("resultado").innerHTML =
+        "Descuento: $ " + descuento +
+        "<br>Porcentaje: " + (porcentaje * 100) + "%" +
+        "<br>Total a pagar: $ " + total;
 }

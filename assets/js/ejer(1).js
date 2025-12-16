@@ -1,14 +1,20 @@
-function parrillada() {
-let personas = Number(document.getElementById("personas").value);
+function ejer1() {
+    let personas = Number(document.getElementById("personas").value);
+    let total;
 
- if (personas <= 0) {
-        document.getElementById("resultado").textContent = "¡Ingrese un numero valido!";
+    if (personas <= 0) {
+        document.getElementById("resultado").innerHTML = "¡Ingrese un numero valido!";
         return;
     }
 
-    let costo = personas <= 200 ? 25000 :
-                personas <= 300 ? 18500 : 16000;
+    if (personas <= 200) {
+        total = personas * 25000;
+    } else if (personas <= 300) {
+        total = personas * 18500;
+    } else {
+        total = personas * 16000;
+    }
 
-    document.getElementById("resultado").textContent =
-        "Presupuesto: $ " + (personas * costo);
+    document.getElementById("resultado").innerHTML =
+        "El presupuesto es: $ " + total;
 }
